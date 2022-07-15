@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- ==========================
+        404
+    =========================== -->
+    <section class="page-404 bg-overlay bg-overlay-gradient mt--100 py-0">
+      <div class="bg-img"><img src="../static/images/banners/1.jpg" alt="background"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 d-flex align-items-center justify-content-center vh-100">
+            <div class="text-center">
+              <h1 class="error-code">404</h1>
+              <h2 class="error-title">Oops! That page can't be found.</h2>
+              <p class="error-desc">The page requested couldn't be found. This could be a spelling error in the URL or a
+                removed page.
+              </p>
+              <a href="{{ url_for('index') }}" class="btn btn__primary btn__primary-style2 btn__icon">
+                <span>Back To Home</span> <i class="icon-arrow-right"></i>
+              </a>
+            </div>
+          </div><!-- /.col-lg-12 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.page-404 -->
+  
+{% endblock %}

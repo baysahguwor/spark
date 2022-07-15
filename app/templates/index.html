@@ -1,0 +1,455 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+
+
+    <!-- ============================
+        Slider
+    ============================== -->
+    {% with message = get_flashed_messages() %}
+      {% if message %}
+        {% for msg in message %}
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ msg }}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    <section class="slider">
+      <div class="slick-carousel carousel-arrows-light carousel-dots-light m-slides-0"
+        data-slick='{"slidesToShow": 1, "arrows": true, "dots": true, "speed": 800,"fade": true,"cssEase": "linear"}'>
+        
+        <!-- slider 1 -->
+        <div class="slide-item align-v-h bg-overlay bg-overlay-gradient">
+          <div class="bg-img"><img src="../static/images/sliders/slider-img.jpg" alt="slide img"></div>
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-sm-12 col-md-12 col-lg-12 col-xl-7">
+                <div class="slide__content">
+           
+                  <h4 class="slide__title">IT Solutions Services Fuelled by your Imagination</h4>
+                 
+                </div><!-- /.slide-content -->
+              </div><!-- /.col-xl-7 -->
+             
+            </div><!-- /.row -->
+          </div><!-- /.container -->
+        </div><!-- /.slide-item -->
+
+        <!-- slider 2 -->
+        <div class="slide-item align-v-h bg-overlay">
+          <div class="bg-img"><img src="../static/images/sliders/slider-img1.jpeg" alt="slide img"></div>
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-sm-12 col-md-12 col-lg-12 col-xl-7">
+                <div class="slide__content">
+              
+                  <h2 class="slide__title">Help Challenge Critical Activities</h2>
+                  
+                </div><!-- /.slide-content -->
+              </div><!-- /.col-xl-7 -->
+            </div><!-- /.row -->
+          </div><!-- /.container -->
+        </div><!-- /.slide-item -->
+        
+        <!-- slider 3 -->
+        <div class="slide-item align-v-h bg-overlay">
+          <div class="bg-img"><img src="../static/images/sliders/slider-img2.jpg" alt="slide img"></div>
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-sm-12 col-md-12 col-lg-12 col-xl-7">
+                <div class="slide__content">
+                
+                  <h2 class="slide__title">We take designs from ideas to working products</h2>
+        
+                </div><!-- /.slide-content -->
+              </div><!-- /.col-xl-7 -->
+            </div><!-- /.row -->
+          </div><!-- /.container -->
+        </div><!-- /.slide-item -->
+
+        <!-- /slider 4 -->
+        <div class="slide-item align-v-h bg-overlay">
+          <div class="bg-img"><img src="../static/images/sliders/slider-img3.jpg" alt="slide img"></div>
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-sm-12 col-md-12 col-lg-12 col-xl-7">
+                <div class="slide__content">
+                  <h2 class="slide__title">Our innovation is droven by our client's need</h2>
+        
+                </div><!-- /.slide-content -->
+              </div><!-- /.col-xl-7 -->
+            </div><!-- /.row -->
+          </div><!-- /.container -->
+        </div><!-- /.slide-item -->
+
+      </div><!-- /.carousel -->
+    </section><!-- /.slider -->
+
+    <!-- ========================
+      About Layout 2
+    =========================== -->
+    
+    <section class="about-layout2 pt-130 pb-90">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-5">
+            <div class="about__img mb-40 zoom" >
+              <img src="../static/images/about/1.jpg" alt="about">
+              <blockquote class="blockquote mb-0">
+                <h4 class="blockquote__title">We are experienced professionals who understand that It services is changing,
+                  and are true partners who care about your success.
+                </h4>
+                <span class="blockquote__author">Jamel Acquah, CEO</span>
+              </blockquote>
+            </div><!-- /.about-img -->
+          </div><!-- /.col-xl-5 -->
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 offset-xl-1">
+            <div class="heading-layout2 mb-40">
+              <h5>Have An Idea?</h5>
+              <h3 class="heading__title">LET US BUILD IT FOR YOU</h3>
+            </div><!-- /heading -->
+            <div class="about-text-wrapper">
+              <div class="about__Text">
+                <p class="font-weight-bold mb-30">Our highly skilled development teams help you accelarate your business via modern custom software solutions.</p>
+                <p>We pride ourselves on transforming ideas into high-performing, cutting-edge software. With us, you’re not getting a typical outsourced development experience. At Routine
+                   Solution it’s all about creative collaboration. We give you what you’re looking for at a budget that aligns with your needs.</p>
+              </div>
+              <a href="{{url_for('contact_us')}}" class="btn btn__primary btn__icon mt-30">
+                <span>Schedule An Appointment</span><i class="icon-arrow-right"></i>
+              </a>
+              
+            </div>
+          </div><!-- /.col-xl-7 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.About Layout 2 -->
+
+    <!-- ========================
+        Services Layout 1
+    =========================== -->
+    
+
+    <section class="blog-grid pb-50">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+            <div class="heading text-center mb-40">
+              <h3 class="heading__title">Our Work</h3>
+            </div><!-- /.heading -->
+          </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+        <div class="row">
+          <!-- Software Dev #1 -->
+          <div class="col-sm-12 col-md-6 col-lg-6" class="blog-img-div">
+            <div class="post-item">
+              <div class="post__img">
+                <a href="{{ url_for('web_app_development') }}">
+                  <img src="../static/images/services/web-app/web-app1.jpg" alt="blog image" class="blog-img">
+                </a>
+              </div><!-- /.blog-img -->
+              <div class="post__body">
+                <h4 class="post__title"><a href="{{ url_for('web_app_development') }}">Web Application Development</a>
+                </h4>
+                <p class="post__desc"> Our web app development process advocates adaptive planning, continuous improvement, and flexibility. 
+                  We build user-friendly, high-performing web apps that are cross-browser friendly. 
+                </p>
+                <a href="{{ url_for('web_app_development')}}" class="btn btn__secondary btn__link">
+                  <span>Read More</span>
+                  <i class="icon-arrow-right"></i>
+                </a>
+              </div><!-- /.blog-content -->
+            </div><!-- /.post-item -->
+          </div><!-- /.col-lg-4 -->
+          <!-- Mobile App #2 -->
+          <div class="col-sm-12 col-md-6 col-lg-6" class="blog-img-div">
+            <div class="post-item">
+              <div class="post__img">
+                <a href="{{ url_for('mobile_app_development') }}">
+                  <img src="../static/images/services/mobile-app/mobile-app1.jpg" alt="blog image" class="blog-img">
+                </a>
+              </div><!-- /.blog-img -->
+              <div class="post__body">
+                <h4 class="post__title"><a href="{{ url_for('mobile_app_development') }}">Mobile Application Development</a>
+                </h4>
+                <p class="post__desc"> We Develop Best Quality Mobile App With High performance, We Turn concept into an amazing  Mobile app.
+                </p>
+                <a href="{{ url_for('mobile_app_development') }}" class="btn btn__secondary btn__link">
+                  <span>Read More</span>
+                  <i class="icon-arrow-right"></i>
+                </a>
+              </div><!-- /.blog-content -->
+            </div><!-- /.post-item -->
+          </div><!-- /.col-lg-4 -->
+          <!-- Data Entry #3 -->
+          <div class="col-sm-12 col-md-6 col-lg-6" class="blog-img-div">
+            <div class="post-item">
+              <div class="post__img">
+                <a href="{{ url_for('data_analysis') }}">
+                  <img src="../static/images/services/data-analysis/data-analysis1.jpg" alt="blog image" class="blog-img">
+                </a>
+              </div><!-- /.blog-img -->
+              <div class="post__body">
+                <h4 class="post__title"><a href="{{ url_for('data_analysis') }}">Data Analysis</a>
+                </h4>
+                <p class="post__desc">Convert raw business data into Useful Information.  
+                  That help you make informed decision.
+                </p>
+                <a href="{{ url_for('data_analysis') }}" class="btn btn__secondary btn__link">
+                  <span>Read More</span>
+                  <i class="icon-arrow-right"></i>
+                </a>
+              </div><!-- /.blog-content -->
+            </div><!-- /.post-item -->
+          </div><!-- /.col-lg-4 -->
+
+          <!-- Data Analysis #4 -->
+          <div class="col-sm-12 col-md-6 col-lg-6" class="blog-img-div">
+            <div class="post-item">
+              <div class="post__img">
+                <a href="{{ url_for('data_entry') }}">
+                  <img src="../static/images/services/data-entry/data-entry1.jpg" alt="blog image" class="blog-img">
+                </a>
+              </div><!-- /.blog-img -->
+              <div class="post__body">
+                <h4 class="post__title"><a href="{{ url_for('data_entry') }}">Data Entry</a>
+                </h4>
+                <p class="post__desc">We offer reliable data entry services,  We provide high-quality data entry services that are  affordable. 
+                </p>
+                <a href="{{ url_for('data_entry') }}" class="btn btn__secondary btn__link">
+                  <span>Read More</span>
+                  <i class="icon-arrow-right"></i>
+                </a>
+              </div><!-- /.blog-content -->
+            </div><!-- /.post-item -->
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.blog Grid -->
+
+    <!-- =========================== 
+      portfolio layout 2
+    ============================= -->
+    <section class="portfolio-layout2 portfolio-layout2-carousel pb-50">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+            <div class="heading mb-50">
+              <h3 class="heading__title">Success Stories</h3>
+            </div><!-- /heading -->
+          </div><!-- /.col-lg-12 -->
+        </div><!-- /.row -->
+        <div class="row">
+          <div class="col-12">
+            <div class="slick-carousel"
+              data-slick='{"slidesToShow": 4, "slidesToScroll": 3, "arrows": false, "dots": true, "responsive": [ {"breakpoint": 992, "settings": {"slidesToShow": 2}}, {"breakpoint": 767, "settings": {"slidesToShow": 2}}, {"breakpoint": 480, "settings": {"slidesToShow": 1}}]}'>
+              <!-- portfolio item #1 -->
+              <div class="portfolio-item ">
+                <div class="portfolio__img">
+                  <a href="#"><img src="../static/images/success/1.jpg"
+                      alt="portfolio img"></a>
+                </div><!-- /.portfolio-img -->
+                <div class="portfolio__icon">
+                  <img src="../static/images/icons/1.png" alt="icon">
+                </div><!-- /.portfolio__icon -->
+                <div class="portfolio__content">
+                  <h4 class="portfolio__title"><a href="#">Data Entry for EU</a></h4>
+                  <p class="portfolio__desc">Summary</p>
+                  <a href="#" class="btn btn__secondary btn__link">
+                    <span>Read More</span>
+                    <i class="icon-arrow-right"></i>
+                  </a>
+                </div><!-- /.portfolio-content -->
+
+              </div><!-- /.portfolio-item -->
+              <!-- portfolio item #2 -->
+              <div class="portfolio-item">
+                <div class="portfolio__img">
+                  <a href="#"><img src="../static/images/success/2.jpg"
+                      alt="portfolio img"></a>
+                </div><!-- /.portfolio-img -->
+                <div class="portfolio__icon">
+                  <img src="../static/images/icons/2.png" alt="icon">
+                </div><!-- /.portfolio__icon -->
+                <div class="portfolio__content">
+                  <h4 class="portfolio__title"><a href="#">Develop App for Spark </a></h4>
+                  <p class="portfolio__desc">Summary .</p>
+                  
+                </div><!-- /.portfolio-content -->
+              </div><!-- /.portfolio-item -->
+              <!-- portfolio item #3 -->
+              <div class="portfolio-item">
+                <div class="portfolio__img">
+                  <a href="#"><img src="../static/images/success/3.jpg"
+                      alt="portfolio img"></a>
+                </div><!-- /.portfolio-img -->
+                <div class="portfolio__icon">
+                  <img src="../static/images/icons/3.png" alt="icon">
+                </div><!-- /.portfolio__icon -->
+                <div class="portfolio__content">
+                  <h4 class="portfolio__title"><a href="#">Built Website for UN</a></h4>
+                  <p class="portfolio__desc">Summary,</p>
+                
+                </div><!-- /.portfolio-content -->
+              </div><!-- /.portfolio-item -->
+              <!-- portfolio item #4 -->
+              <div class="portfolio-item">
+                <div class="portfolio__img">
+                  <a href="#"><img src="../static/images/success/4.jpg"
+                      alt="portfolio img"></a>
+                </div><!-- /.portfolio-img -->
+                <div class="portfolio__icon">
+                  <img src="../static/images/icons/4.png" alt="icon">
+                </div><!-- /.portfolio__icon -->
+                <div class="portfolio__content">
+                  <h4 class="portfolio__title"><a href="#">Provide Consultancy for OMA</a></h4>
+                  <p class="portfolio__desc">Summary</p>
+                
+                </div><!-- /.portfolio-content -->
+              </div><!-- /.portfolio-item -->
+              <!-- portfolio item #5 -->
+              <div class="portfolio-item">
+                <div class="portfolio__img">
+                  <a href="#"><img src="../static/images/success/5.jpg"
+                      alt="portfolio img"></a>
+                </div><!-- /.portfolio-img -->
+                <div class="portfolio__icon">
+                  <img src="../static/images/icons/5.png" alt="icon">
+                </div><!-- /.portfolio__icon -->
+                <div class="portfolio__content">
+                  <h4 class="portfolio__title"><a href="#">The Best IT Practices in
+                      Cloud and Security</a></h4>
+                  <p class="portfolio__desc">Summary.</p>
+               
+                </div><!-- /.portfolio-content -->
+              </div><!-- /.portfolio-item -->
+              <!-- portfolio item #6 -->
+              <div class="portfolio-item">
+                <div class="portfolio__img">
+                  <a href="#"><img src="../static/images/success/6.jpg"
+                      alt="portfolio img"></a>
+                </div><!-- /.portfolio-img -->
+                <div class="portfolio__icon">
+                  <img src="../static/images/icons/6.png" alt="icon">
+                </div><!-- /.portfolio__icon -->
+                <div class="portfolio__content">
+                  <h4 class="portfolio__title"><a href="#">Helping Companies With
+                      Healthcare Inustry</a></h4>
+                  <p class="portfolio__desc">Summary</p>
+                  
+                </div><!-- /.portfolio-content -->
+              </div><!-- /.portfolio-item -->
+            </div><!-- /.carousel -->
+          </div><!-- /.col-lg-12 -->
+        </div><!-- /.row -->
+        
+      </div><!-- /.container -->
+    </section><!-- /.portfolio layout 2 -->
+
+    
+
+   <!-- =========================
+       Banner layout 1
+      =========================== -->
+      <section id="banner" class="banner-layout1 pt-130 bg-overlay bg-overlay-primary">
+        <div class="bg-img"><img src="assets/images/banners/4.jpg" alt="background"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-5 d-flex flex-column justify-content-between">
+              <div>
+                <div class="heading heading-light mb-50">
+                  <h2 class="heading__subtitle">Your idea and details are 100% protected by our NDA (non disclosure agreement).</h2>
+                  <h3 class="heading__title mb-30">Improve Efficiency And Provide Better Experience By Our IT Solutions!
+                  </h3>
+                  <p class="heading__desc">Our software development experts deliver polished, ready-to-launch solutions that our clients 
+                    can be proud of. One thing is guaranteed: We never compromise on quality.
+                  </p>
+                </div><!-- /.heading -->
+                <div class="d-flex flex-wrap mb-60">
+                  <a href="{{ url_for('contact_us') }}" class="btn btn__white mr-30">
+                    <i class="icon-arrow-right"></i>
+                    <span>Get Started</span>
+                  </a>
+                </div>
+              </div>
+              <ul class="list-items list-items-layout2 list-items-light list-unstyled">
+                <li>Develope best applications that meet your business needs. </li>
+                <li>Provides efficient and error free data entry services.</li>
+                <li>Let us help you convert raw business data into actionable insights. </li>
+              </ul>
+            </div><!-- /.col-xl-6 -->
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-7">
+              <div class="contact-panel">
+                <form class="contact-panel__form" method="post" action="{{ url_for('index')}}" novalidate>
+                  {{ form.hidden_tag() }}
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <h4 class="contact-panel__title">Contact us</h4>
+                      <p class="contact-panel__desc mb-20">Our deep pool of certified engineers and IT staff are ready to
+                        help you to keep your IT business safe & ensure high availability.</p>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                      <div class="form-group">
+                        {{ form.name(class="form-control", placeholder="Name") }}
+                        <br>
+                        {% for error in form.name.errors %}
+                          <span style="color:rgb(247, 9, 128);">{{ error }}</span>
+                        {% endfor %}
+                      </div>
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                      <div class="form-group">
+                        {{ form.email(class="form-control", placeholder="Email") }}
+                        <br>
+                        {% for error in form.email.errors %}
+                          <span style="color:rgb(247, 9, 128);">{{ error }}</span>
+                        {% endfor %}
+                      </div>
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                      <div class="form-group" >
+                        <select class="form-control" name="inquiry-type">
+                          <option value="1">Inquiry</option>
+                          <option value="2">case study</option>
+                        </select>
+                      </div>
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                      <div class="form-group">
+                        {{ form.phone(class="form-control", placeholder="Phone" ) }}
+                        <br>
+                        {% for error in form.phone.errors %}
+                          <span style="color:rgb(247, 9, 128);">{{ error }}</span>
+                        {% endfor %}
+                      </div>
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-12">
+                      <div class="form-group">
+                        {{ form.description(class="form-control", placeholder="Describe your inquirey!")}}
+                        <br>
+                        {% for error in form.description.errors %}
+                          <span style="color:rgb(247, 9, 128);">{{ error }}</span>
+                        {% endfor %}
+                      </div>
+                      <button type="submit" class="btn btn__primary btn__block btn__xhight mt-10">
+                        <span>Submit Request</span> <i class="icon-arrow-right"></i>
+                      </button>
+                      <div class="contact-result"></div>
+                    </div><!-- /.col-lg-12 -->
+                  </div><!-- /.row -->
+                </form>
+              </div>
+            </div><!-- /.col-xl-6 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </section><!-- /.Banner layout 1 -->
+
+
+
+{% endblock %}

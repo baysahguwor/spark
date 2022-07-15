@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <!-- ========================
+       page title 
+    =========================== -->
+    
+    <!-- ========================
+      Secondary Nav
+    =========================== -->
+    <section class="secondary-nav secondary-nav-layout2 sticky-top py-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav class="nav nav-tabs justify-content-center">
+              <a href="{{ url_for('it_solutions') }}" class="nav__link ">Home </a>
+              <a href="{{ url_for('web_app_development') }}" class="nav__link">Web Application Development</a>
+              <a href="{{ url_for('data_analysis') }}"  class="nav__link">Data Analytics </a>
+              <a href="{{ url_for('mobile_app_development') }}" class="nav__link active">Mobile App Development</a>
+              <a href="{{ url_for('data_entry') }}" class="nav__link">Data Entry</a>
+            </nav>
+          </div><!-- /.col-12 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.Secondary Nav -->
+    <!-- ======================
+    Features Layout 3
+    ========================= -->
+    <section id="overview" class="features-layout3 pt-130 pb-130">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-7 col-xl-6">
+            <div class="heading heading-layout2 mb-50">
+              <h4 class="heading__title">MODERN PLATFORMS
+              </h4>
+              <p class="heading__desc mb-30">Every app starts with an idea. Our 
+                job begins with a thorough analysis of that idea; strategizing how to turn a good concept into an amazing app that gets people talking.</p>
+                <p>We're experienced with both Android and iOS applications(native and cross-platform design) with an intense focus on usability and user
+                   experience. We make sure that your application works the same across various operating systems and versions.</p>
+                   <p>Our team has worked on a number of applications across various industries, from messaging applications to music players and even social media events. No concept is too wild and no idea too left-of-field for us. We love a challenge.
+                    We use world-class tools including Swift, Objective - C, React Native, and Flutter to build our native iOS apps. Our native Android apps are built with Android NDK, Java, and Kotlin.</p>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="cta-banner mt-50 mb-30 d-flex flex-wrap align-items-center">
+                  <h4 class="cta__title pr-30">If you have any questions or need help, feel free to contact with
+                    our
+                    team, or you can call us any time <a href="tel:+231776407102"> <i class="icon-phone"></i> (+231) 776-407-102</a>
+                  </h4>
+                  <a href="cantact_us" class="btn btn__primary">Contact Us</a>
+                </div><!-- /.cta-banner -->
+              </div><!-- /.col-12 -->
+            </div><!-- /.row -->
+          </div><!-- /.col-xl-5 -->
+          <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5 offset-xl-1">
+            <div class="sticky-top">
+              <img src="../static/images/services/mobile-app/mobile.jpg" alt="banner">
+            </div>
+          </div><!-- /col-lg-5 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.Features Layout 3 -->
+
+   
+
+    <!-- ========================
+      Footer
+    ========================== -->
+   {% endblock %}

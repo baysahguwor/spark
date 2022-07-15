@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="DataSoft  IT Solutions &  Services Template">
+  <link href="../static/images/favicon/android-chrome-512x512.png" rel="icon">
+  <title>{{ title }}</title>
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
+  <link rel="stylesheet" href="../static/css/libraries.css">
+  <link rel="stylesheet" href="../static/css/style.css">
+      <!-- ++++ Javascript libraries ++++ -->
+   
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="preloader">
+      <div class="loading"><span></span><span></span><span></span><span></span></div>
+    </div> <!-- /.preloader -->
+
+    <!-- =========================
+        Header
+    =========================== -->
+    <header class="header header-light">
+      <div class="header__topbar">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="d-flex align-items-center justify-content-between">
+                <ul class="contact__list d-flex flex-wrap align-items-center list-unstyled mb-0">
+                  <li>
+                    <i class="icon-phone"></i><a href="tel:+231770000109">+231776407102</a>
+                  </li>
+                  <li>
+                    <i class="icon-mail"></i><a href="mailto:sparksolution@gmail.com">sparksolution70@gmail.com</a>
+                  </li>
+                  <li>
+                    <i class="icon-clock"></i><a href="{{ url_for('contact_us') }}">Hours: Mon-Fri: 9am - 5pm</a>
+                  </li>
+                </ul>
+                <ul class="list-unstyled d-flex justify-content-end align-items-center mb-0">
+                  <li>
+                    <div class="dropdown lang-dropdown">
+                      <button class="dropdown-toggle lang-dropdown-toggle" id="langDropdown" data-toggle="dropdown">
+                        <i class="icon-map"></i><span></span>
+                      </button>
+                    <!----y  <div class="dropdown-menu" aria-labelledby="langDropdown">
+                        <a class="dropdown-item" href="#"></a>
+                        <a class="dropdown-item" href="#"></a>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- <li>
+                    <ul class="navbar-actions list-unstyled mb-0 d-flex align-items-center">
+                      <li>
+                        <button class="action__btn action__btn-login open-login-popup">
+                          <i class="icon-user"></i><span>Login</span>
+                        </button>
+                      </li>
+                    </ul> /.navbar-actions -->
+                  </li>
+                </ul>
+              </div>
+            </div><!-- /.col-12 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div><!-- /.header-top -->
+      <nav class="navbar navbar-expand-lg sticky-navbar">
+        <div class="container">
+          <a class="navbar-brand" href="{{ url_for('index') }}">
+            <img src="../static/images/logo/spark-logo.svg" class="logo-light" alt="logo">
+            <img src="../static/images/logo/spark-logo.svg" class="logo-dark" alt="logo">
+          </a>
+          <button class="navbar-toggler" type="button">
+            <span class="menu-lines"><span></span></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNavigation">
+            <ul class="navbar-nav ml-auto">
+          
+              <li class="nav__item">
+                <a href = "{{ url_for('index') }}" class="nav__item-link">Home</a>
+              </li><!-- /.nav-item -->  
+              <li class="nav__item">
+                <a href=" {{ url_for('about_us') }}" class="nav__item-link">About Us</a>
+              </li><!-- /.nav-item -->
+              <li class="nav__item">
+                <a href="{{ url_for('it_solutions') }}" class="nav__item-link">IT Solutions </a>
+              </li><!-- /.nav-item -->
+              <li class="nav__item navbar-actions list-unstyled mb-0 d-flex align-items-center">
+                <a href = "{{ url_for('contact_us') }}" class="btn action__btn-contact">Contact us</a>
+              </li><!-- /.nav-item -->
+            </ul><!-- /.navbar-nav -->
+            <button class="close-mobile-menu d-block d-lg-none"><i class="fas fa-times"></i></button>
+          </div><!-- /.navbar-collapse -->
+
+          <!-- <div class="d-flex align-items-center">
+            <a href="{{ url_for('contact_us') }}" class="btn action__btn-contact d-none d-xl-block ml-30">Request A Quote</a>
+            <a href="#" class="action__btn action__btn-search ml-20"><i class="icon-search"></i></a>
+          </div> -->
+
+        </div><!-- /.container -->
+      </nav><!-- /.navabr -->
+    </header><!-- /.Header -->
+
+    
+
+    
+    {% block content %}
+    
+
+    {% endblock %}
+
+
+
+    <!-- ========================
+        Footer
+      ========================== -->
+    <footer class="footer bg-secondary">
+      <div class="container">
+        <div class="footer-top pt-50 pb-30">
+          <div class="row footer-row">
+            <div class="col-sm-12 col-md-3 col-lg-2 footer-logo-div">
+              <img src="../static/images/logo/spark_logo_edited-white.svg" alt="logo" class="mb-30 logo-white">
+            </div><!-- /.col-lg-2 -->
+            <div class="col-sm-8 col-md-4 col-lg-3">
+              <h6 class="footer-top__title">Contact us now for more info!</h6>
+            </div><!-- /.col-lg-3 -->
+            <div class="col-sm-12 col-md-6 col-lg-7">
+              <form class="footer-form d-flex mb-0">
+                <input type="text" class="form-control mr-20" placeholder="Your Email Address">
+                <button type="submit" class="btn btn__primary btn__primary-style2">
+                  <span>Subscribe</span>
+                  <i class="icon-arrow-right"></i>
+                </button>
+              </form>
+            </div><!-- /.col-lg-6 -
+          </div>< /.row -->
+        </div><!-- /.footer-top -->
+        <div class="footer-primary">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-5 footer-widget footer-widget-about">
+              <div class="footer-widget__content">
+                <div class="contact-info">
+                  <h6 class="footer-widget__title">Quick Contact</h6>
+                  <ul class="contact-list list-unstyled">
+                    <li class="color-gray">If you have any questions or need help, feel free to contact with our team.
+                    </li>
+                    <li class="mt-20 mb-20">
+                      <a href="tel:+231776107402" class="phone-number">
+                        <i class="icon-phone"></i> <span>+231 776-407-102</span>
+                      </a>
+                    </li>
+                    <li class="color-body">2nd Street Jallah's Town Road, Sinkor,  Monrovia Liberia.</li>
+                  </ul>
+                </div><!-- /.contact-info -->
+                <ul class="social-icons list-unstyled mb-0">
+                  <li><a href="https://web.facebook.com/SparksolutionINC"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="https://instagram.com/solutionsspark/"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="https://twitter.com/Sparktweeting"><i class="fab fa-twitter"></i></a></li>
+                </ul><!-- /.social-icons -->
+              </div><!-- /.footer-widget__content -->
+            </div><!-- /.col-xl-2 -->
+            <div class="col-sm-6 col-md-6 col-lg-2 offset-lg-1 footer-widget footer-widget-nav">
+              <h6 class="footer-widget__title">Company</h6>
+              <div class="footer-widget__content">
+                <nav>
+                  <ul class="list-unstyled">
+                    <li><a href="{{ url_for('about_us') }}">About Us</a></li>
+                    <li><a href="{{ url_for('about_us') }}">Meet Our Team</a></li>
+                    <li><a href="{{ url_for('contact_us') }}">Contact us</a></li>
+
+                  </ul>
+                </nav>
+              </div><!-- /.footer-widget__content -->
+            </div><!-- /.col-lg-2 -->
+            <div class="col-sm-6 col-md-6 col-lg-2 footer-widget footer-widget-nav">
+              <h6 class="footer-widget__title">Solutions</h6>
+              <div class="footer-widget__content">
+                <nav>
+                  <ul class="list-unstyled">
+                    <li><a href="{{ url_for('web_app_development') }}">Web Application Development</a></li>
+                    <li><a href="{{ url_for('data_analysis') }}">Data Analytics</a></li>
+                    <li><a href="{{ url_for('mobile_app_development') }}">Mobile App Development </a></li>
+                    <li><a href="{{ url_for('data_entry') }}">Data Entry</a></li>
+                  </ul>
+                </nav>
+              </div><!-- /.footer-widget__content -->
+            </div><!-- /.col-lg-2 -->
+            <div class="col-sm-6 col-md-6 col-lg-2 footer-widget footer-widget-nav">
+              <h6 class="footer-widget__title">Resources</h6>
+              <div class="footer-widget__content">
+                <nav>
+                  <ul class="list-unstyled">
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="{{ url_for('about_us') }}">Help & FAQ</a></li>
+                    <li><a href="{{ url_for('contact_us') }}">Contact Us</a></li>
+                   
+                  </ul>
+                </nav>
+              </div><!-- /.footer-widget__content -->
+            </div><!-- /.col-lg-2 -->
+
+            <!-- <div class="col-sm-6 col-md-6 col-lg-2 footer-widget footer-widget-nav">
+              <h6 class="footer-widget__title">Download</h6>
+              <div class="footer-widget__content">
+                <a href="#" class="btn btn__white btn__download mb-20">
+                  <i class="fab fa-apple"></i>
+                  <span>App Store</span>
+                </a>
+                <a href="#" class="btn btn__white btn__download mb-20">
+                  <i class="fab fa-google-play"></i>
+                  <span>Google Play</span>
+                </a>
+              </div> /.footer-widget__content
+            </div>/.col-lg-2 -->
+            
+          </div><!-- /.row -->
+        </div><!-- /.footer-primary -->
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 text-center pb-40">
+            <span class="fz-14">&copy; <script>document.write(new Date().getFullYear())</script> Spark Solutions, All Rights Reserved.</span>
+            <a class="fz-14 color-primary" href="#"></a>
+          </div><!-- /.col-lg-12 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </footer><!-- /.Footer -->
+    <button id="scrollTopBtn"><i class="fas fa-long-arrow-alt-up"></i></button>
+<!-- 
+   
+
+  </div></.wrapper -->
+
+  <script src="../static/js/jquery-3.5.1.min.js"></script>
+  <script src="../static/js/plugins.js"></script>
+  <script src="../static/js/main.js"></script>
+</body>
+
+</html>

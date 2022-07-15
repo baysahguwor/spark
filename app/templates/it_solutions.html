@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- ========================
+       Second Nav
+    =========================== -->
+    <section class="secondary-nav secondary-nav-layout2 sticky-top py-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav class="nav nav-tabs justify-content-center">
+              <a href="{{ url_for('it_solutions') }}" class="nav__link active">Home </a>
+              <a href="{{ url_for('web_app_development') }}" class="nav__link">Web Application Development</a>
+              <a href="{{ url_for('data_analysis') }}"  class="nav__link">Data Analytics </a>
+              <a href="{{ url_for('mobile_app_development') }}" class="nav__link">Mobile App Development</a>
+              <a href="{{ url_for('data_entry') }}" class="nav__link">Data Entry</a>
+            </nav>
+          </div><!-- /.col-12 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.Secondary Nav -->
+
+  
+
+     <!-- ======================
+     IT Services 
+      ========================= -->
+     <br>
+          <div class="row">
+         
+              <div class="container heading text-center mb-50">
+                <h3 class="heading__title">We offer the best IT Solutions</h3>
+              </div><!-- /.heading -->
+            </div><!-- /.col-lg-6 -->
+          </div><!-- /.row -->
+
+    <!-- Software Development -->      
+    <section class="about-layout2 pt-130 pb-90 container-fluid secondary-color">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-5">
+            <div class="about__img mb-40 zoom" >
+              <img src="../static/images/services/software-dev.jpg" alt="about" class="about-img">
+             
+            </div><!-- /.about-img -->
+          </div><!-- /.col-xl-5 -->
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 offset-xl-1">
+            <div class="heading-layout2 mb-40">
+              <h3 class="heading__title">Web App Development.</h3>
+            </div><!-- /heading -->
+            <div class="about-text-wrapper">
+              <div class="about__Text">
+                    <p>Our web app development process advocates adaptive planning, continuous improvement, and flexibility. We know what it takes to build user-friendly, 
+                  high-performing web apps that are cross-browser friendly.</p>
+              </div>
+              <a href="web-app-development" class="btn btn__primary btn__icon mt-30">
+                <span>Read More</span><i class="icon-arrow-right"></i>
+              </a>
+              
+            </div>
+          </div><!-- /.col-xl-7 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- / -->
+
+
+     <!-- Data Entry -->      
+     <section class="about-layout2 pt-130 pb-90 container-fluid ">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-5">
+            <div class="about__img mb-40 zoom" >
+              <img src="../static/images/services/data-entry/data-entry.jpg" alt="about" class="about-img">
+             
+            </div><!-- /.about-img -->
+          </div><!-- /.col-xl-5 -->
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 offset-xl-1">
+            <div class="heading-layout2 mb-40">
+              <h3 class="heading__title">Data Entry</h3>
+            </div><!-- /heading -->
+            <div class="about-text-wrapper">
+              <div class="about__Text">
+                <p>With our data specialist, We're committed to providing high-quality data entry services that are also affordable.</p>
+              </div>
+              <a href="{{ url_for('data_entry') }}" class="btn btn__primary btn__icon mt-30">
+                <span>Read More</span><i class="icon-arrow-right"></i>
+              </a>
+              
+            </div>
+          </div><!-- /.col-xl-7 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /. -->
+
+     <!-- Mobile App Development -->      
+     <section class="about-layout2 pt-130 pb-90 container-fluid secondary-color">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-5">
+            <div class="about__img mb-40 zoom" >
+              <img src="../static/images/services/mobile-app/mobile-app.jpg" alt="about" class="about-img">
+             
+            </div><!-- /.about-img -->
+          </div><!-- /.col-xl-5 -->
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 offset-xl-1">
+            <div class="heading-layout2 mb-40">
+              <h3 class="heading__title">Mobile App Development.</h3>
+            </div><!-- /heading -->
+            <div class="about-text-wrapper">
+              <div class="about__Text">
+                <p>Every app starts with an idea. Our job begins with a thorough analysis of that idea; strategizing how to turn a good concept into an amazing app that gets people talking.</p>
+              </div>
+              <a href="{{ url_for('mobile_app_development')}}" class="btn btn__primary btn__icon mt-30">
+                <span>Read More</span><i class="icon-arrow-right"></i>
+              </a>
+              
+            </div>
+          </div><!-- /.col-xl-7 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.A-->
+
+
+     <!-- Data Analysis -->      
+     <section class="about-layout2 pt-130 pb-90 container-fluid ">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-5">
+            <div class="about__img mb-40 zoom" >
+              <img src="../static/images/services/data-analysis/data-analysis2.jpg" alt="about" class="about-img">
+             
+            </div><!-- /.about-img -->
+          </div><!-- /.col-xl-5 -->
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 offset-xl-1">
+            <div class="heading-layout2 mb-40">
+              <h3 class="heading__title">Data Analysis .</h3>
+            </div><!-- /heading -->
+            <div class="about-text-wrapper">
+              <div class="about__Text">
+                <p>Let us help you convert raw business data into actionable insights. 
+                  With our data analytics services, you'll reap the benefits of improved decision quality and speed.</p>
+              </div>
+              <a href="{{ url_for('data_analysis') }}" class="btn btn__primary btn__icon mt-30">
+                <span>Read More</span><i class="icon-arrow-right"></i>
+              </a>
+              
+            </div>
+          </div><!-- /.col-xl-7 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.About Layout 2 -->
+         
+{% endblock %}

@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <!-- ========================
+       page title 
+    =========================== -->
+    
+    <!-- ========================
+      Secondary Nav
+    =========================== -->
+    <section class="secondary-nav secondary-nav-layout2 sticky-top py-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav class="nav nav-tabs justify-content-center">
+              <a href="{{ url_for('it_solutions') }}" class="nav__link ">Home </a>
+              <a href="{{ url_for('web_app_development') }}" class="nav__link ">Web Application Development</a>
+              <a href="{{ url_for('data_analysis') }}"  class="nav__link active">Data Analytics </a>
+              <a href="{{ url_for('mobile_app_development') }}" class="nav__link ">Mobile App Development</a>
+              <a href="{{ url_for('data_entry') }}" class="nav__link">Data Entry</a>
+            </nav>
+          </div><!-- /.col-12 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.Secondary Nav -->
+
+    <!-- ======================
+    Features Layout 3
+    ========================= -->
+    <section id="overview" class="features-layout3 pt-130 pb-130">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-7 col-xl-6">
+            <div class="heading heading-layout2 mb-50">
+              <h3 class="heading__title"> DATA
+                ANALYTICS
+              </h3>
+              <p class="heading__desc mb-30">Let us help you convert raw business data into actionable insights.
+                 Time-consuming, instinct-based decisions lead businesses down a slippery slope of fragmented processes and procedures. With our data analytics services, you’ll reap the benefits of improved decision quality and speed.
+              </p>
+              <p class="heading__desc mb-30">Using methods from AI, machine learning, and deep learning, we help our customers make sense of their data. Our qualitative and 
+                quantitative data analytics servers help companies of any size address various bottlenecks in their organization.
+              </p>
+              <p class="heading__desc mb-30">
+                We focus on predictive analytics and models to help drive growth and gather insights.
+              </p>
+        </div>
+  
+        <div class="row">
+          <div class="col-12">
+            <div class="cta-banner mt-50 mb-30 d-flex flex-wrap align-items-center">
+              <h4 class="cta__title pr-30">If you have any questions or need help, feel free to contact with
+                our
+                team, or you can call us any time <a href="tel:00231776407102">+231 776-407-102</a>
+              </h4>
+              <a href="{{ url_for('contact_us') }}" class="btn btn__primary">Contact Us</a>
+            </div><!-- /.cta-banner -->
+          </div><!-- /.col-12 -->
+        </div><!-- /.row -->
+      </div><!-- /.col-xl-5 -->
+      <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5 offset-xl-1">
+        <div class="sticky-top">
+          <img src="../static/images/services/data-analysis/data-analysis.jpg " class="rounded" alt="banner">
+        </div>
+      </div><!-- /col-lg-5 -->
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+</section><!-- /.Features Layout 3 -->
+
+
+
+
+<!-- ========================
+  Footer
+========================== -->
+{% endblock %}
+         

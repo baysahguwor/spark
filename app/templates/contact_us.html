@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+    <!-- ========================
+       page title 
+    =========================== -->
+    <div class="row">
+    <div class="container heading text-center mb-50">
+      <h3 class="heading__title">Contact Us</h3>
+    </div>
+    </div><!-- /.row -->
+
+    <!-- ==========================
+        contact layout 1
+    =========================== -->
+    <section class="contact-layout1 pt-0 mt--100">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="contact-panel d-flex flex-wrap">
+              <div class="contact-panel__info">
+                <div class="bg-img"><img src="../static/images/backgrounds/3.jpg" alt="banner"></div>
+                <div class="contact-block">
+                  <h5 class="contact-block__title">Our Location</h5>
+                  <ul class="contact-block__list list-unstyled">
+                    <li>2nd Street Jallah's Town Road, Sinkor, Monrovia Liberia.</li>
+                  </ul>
+                </div><!-- /.contact-panel__info__block -->
+                <div class="contact-block">
+                  <h5 class="contact-block__title">Quick Contact</h5>
+                  <ul class="contact-block__list list-unstyled">
+                    <li><a href="mailto:DataSoft@7oroof.com"></a>Email: sparksolution70@gmail.com </li>
+                    <li><a href="tel:+231776407102"></a>Support: (+231) 776-407-102</li>
+                  </ul>
+                </div><!-- /.contact-panel__info__block -->
+                <div class="contact-block">
+                  <h5 class="contact-block__title">Opening Hours</h5>
+                  <ul class="contact-block__list list-unstyled">
+                    <li>Monday - Friday</li>
+                    <li>09:00 AM - 05:00 PM</li>
+                  </ul>
+                </div><!-- /.contact-panel__info__block -->
+                <p class="color-white mb-20">If you have any questions or need help, feel free to contact with our team.
+                </p>
+                <a href="tel:+231776407102" class="phone-number">
+                  <i class="icon-phone"></i> <span>(+231) 776-407-102</span>
+                </a>
+                <ul class="social-icons list-unstyled mb-0">
+                  <li><a href="https://web.facebook.com/SparksolutionINC"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="https://instagram.com/solutionsspark/"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="https://twitter.com/Sparktweeting"><i class="fab fa-twitter"></i></a></li>
+                </ul><!-- /.social-icons -->
+              </div>
+              <form class="contact-panel__form" method="post" action="{{ url_for('contact_us')}}" novalidate>
+                {{ form.hidden_tag() }}
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h4 class="contact-panel__title">Contact us</h4>
+                    <p class="contact-panel__desc mb-20">Our deep pool of certified engineers and IT staff are ready to
+                      help you to keep your IT business safe & ensure high availability.</p>
+                  </div>
+                  <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="form-group">
+                      {{ form.name(class="form-control", placeholder="Name" ) }}
+                      <br>
+                      {% for error in form.name.errors %}
+                        <span style="color:rgb(247, 9, 128);">{{ error }}</span>
+                      {% endfor %}
+                    </div>
+                  </div><!-- /.col-lg-6 -->
+                  <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="form-group">
+                      {{ form.email(class="form-control", placeholder="Email" ) }}
+                      <br>
+                      {% for error in form.email.errors %}
+                        <span style="color:rgb(247, 9, 128);">{{ error }}</span>
+                      {% endfor %} 
+                    </div>
+                  </div><!-- /.col-lg-6 -->
+                  <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="form-group">
+                      {{ form.phone(class="form-control", placeholder="Phone" ) }}
+                      <br>
+                      {% for error in form.phone.errors %}
+                        <span style="color:rgb(247, 9, 128);">{{ error }}</span>
+                      {% endfor %}  
+                    </div>
+                  </div><!-- /.col-lg-6 -->
+                  <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="form-group">
+                      {{ form.website(class="form-control", placeholder="Website (optional) " ) }}
+                      <br>
+                      {% for error in form.website.errors %}
+                        <span style="color:rgb(247, 9, 128);">{{ error }}</span>
+                      {% endfor %} 
+                    </div>
+                  </div><!-- /.col-lg-6 -->
+                  <div class="col-12">
+                    <div class="form-group">
+                      {{ form.description(class="form-control", placeholder="Description" ) }}
+                      <br>
+                      {% for error in form.description.errors %}
+                        <span style="color:rgb(247, 9, 128);">{{ error }}</span>
+                      {% endfor %}  
+                    </div>
+                    <button type="submit" class="btn btn__primary btn__icon btn__xhight mt-10">
+                      <span>Submit Request</span> <i class="icon-arrow-right"></i>
+                    </button>
+                    <div class="contact-result"></div>
+                  </div><!-- /.col-lg-12 -->
+                </div><!-- /.row -->
+              </form>
+            </div>
+          </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.contact layout 1 -->
+
+    <!-- ==========================
+       Contact Info
+    ============================ -->
+  
+{% endblock %}

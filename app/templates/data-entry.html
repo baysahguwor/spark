@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <!-- ========================
+       page title 
+    =========================== -->
+    
+    <!-- ========================
+      Secondary Nav
+    =========================== -->
+    <section class="secondary-nav secondary-nav-layout2 sticky-top py-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav class="nav nav-tabs justify-content-center">
+              <a href="{{ url_for('it_solutions') }}" class="nav__link ">Home </a>
+              <a href="{{ url_for('web_app_development') }}" class="nav__link ">Web Application Development</a>
+              <a href="{{ url_for('data_analysis') }}"  class="nav__link ">Data Analytics </a>
+              <a href="{{ url_for('mobile_app_development') }}" class="nav__link ">Mobile App Development</a>
+              <a href="{{ url_for('data_entry') }}" class="nav__link active">Data Entry</a>
+            </nav>
+          </div><!-- /.col-12 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.Secondary Nav -->
+
+    <!-- ======================
+    Features Layout 3
+    ========================= -->
+    <section id="overview" class="features-layout3 pt-130 pb-130">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-7 col-xl-6">
+            <div class="heading heading-layout2 mb-50">
+              <h3 class="heading__title"> DATA ENTRY
+              </h3>
+              <p class="heading__desc mb-30"> With our data specialist, We're committed to providing high-quality data entry services that are also affordable.</p>
+        
+              <p class="heading__desc mb-30">
+                Over the time, we have built a strong, committed Data Entry Team that delivers high-end results.
+                What's more, our highly trained professionals work with advanced tools to help ensure up to 99% accuracy!
+              </p>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="cta-banner mt-50 mb-30 d-flex flex-wrap align-items-center">
+              <h4 class="cta__title pr-30">If you have any questions or need help, feel free to contact with
+                our
+                team, or you can call us any time <a href="tel:00231776407102">+231 776-407-102</a>
+              </h4>
+              <a href="{{ url_for('contact_us') }}" class="btn btn__primary">Contact Us</a>
+            </div><!-- /.cta-banner -->
+          </div><!-- /.col-12 -->
+        </div><!-- /.row -->
+      </div><!-- /.col-xl-5 -->
+      <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5 offset-xl-1">
+        <div class="sticky-top">
+          <img src="../static/images/services/data-entry/data-entry1.jpg" class="rounded" alt="banner">
+        </div>
+      </div><!-- /col-lg-5 -->
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+</section><!-- /.Features Layout 3 -->
+
+
+
+
+<!-- ========================
+  Footer
+========================== -->
+{% endblock %}
+         
