@@ -52,6 +52,13 @@
 /*-------------------------- 
       Global Styles
 ---------------------------*/
+/* hide header_topbar on mobile */
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .header__topbar {
+    display: none;
+  }
+}
 
 
 /* services pages margin    */
@@ -65,8 +72,6 @@
   padding-right: 50px;
   padding-left: 50px;
 }
-
-
 
 
 
@@ -1221,7 +1226,7 @@ h6 {
 }
 
 .heading__desc {
-  font-size: 16px;
+  font-size: 19px;
   margin-bottom: 0;
 }
 
@@ -1298,7 +1303,7 @@ h6 {
     font-size: 13px;
   }
   .heading__desc {
-    font-size: 13px;
+    font-size: 17px;
   }
   .heading-layout2 .heading__title {
     font-size: 20px;
@@ -6002,6 +6007,7 @@ input[type=radio] {
 .post-item .post__img img {
   -webkit-transition: all 0.9s ease;
   transition: all 0.9s ease;
+  padding-right: 60px;
 }
 
 .post-item:hover .post__img img {
